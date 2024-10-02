@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully functional calculator</title>
+    <style>
+        h1{
+    text-align:center;
+    background-color:rgb(138, 15, 87) ;
+    color:white;
+    border-radius:12px;
+    padding:30px;
+}
+.tex{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    box-sizing:border-box;
+    font-size: 24px;
+    font-weight: bold;
+}
+.cal{
+    text-align:center;
+    border:5px solid;
+    background-color: green;
+    padding: 20px;
+    width: 300px;
+    height:370px;
+    border-radius:8px;
+}
+.but{
+    background-color:tomato;
+    min-height: 50px;
+    width:50px;
+    padding :10px;
+    text-align:center;
+    display:inline-grid;
+    margin:4px 2px;
+    font-size:24px;
+    border-radius:12px;
+}
+.but:hover{
+    transform:scale(120%);
+}
+.big{
+    background-color:tomato;
+    min-height: 50px;
+    width:90px;
+    padding :10px;
+    text-align:center;
+    display:inline-grid;
+    margin:4px 2px;
+    font-size:24px;
+    border-radius:12px;
+}
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <center>
+        <form class="cal" name="calculatorForm">
+        <div class="display">
+        <input type="text" name="display" class="tex" placeholder="0"></div>
+        <div>
+        <input type="button" name="clear"  value="Clear" class="big" onclick="display.value=''"/>
+        <input type="button" name="delete"  value="Delete" class="big" onclick="display.value=display.
+        value.toString().slice(0,-1)"/></div>
+        <div>
+        <input type="button" name="num7" value="7" class="but" onclick="display.value+='7'" />
+        <input type="button" name="num8" value="8" class="but" onclick="display.value+='8'" />
+        <input type="button" name="num9" value="9" class="but" onclick="display.value+='9'" />
+        <input type="button" name="sum" value="+" class="but" onclick="display.value+='+'" />
+        </div>
+        <div>
+        <input type="button" name="num4" value="4" class="but" onclick="display.value+='4'" />
+        <input type="button" name="num5" value="5" class="but" onclick="display.value+='5'" />
+        <input type="button" name="num6" value="6" class="but" onclick="display.value+='6'" />
+        <input type="button" name="sub" value="-" class="but" onclick="display.value+='-'" />
+        </div>
+        <div>
+        <input type="button" name="num1" value="1" class="but" onclick="display.value+='1'" />
+        <input type="button" name="num2" value="2" class="but" onclick="display.value+='2'" />
+        <input type="button" name="num3" value="3" class="but" onclick="display.value+='3'" />
+        <input type="button" name="mul" value="*" class="but" onclick="display.value+='*'" />
+        </div>
+        <div>
+        <input type="button" name="num0" value="0" class="but" onclick="display.value+='0'" />
+        <input type="button" name="dot" value="." class="but" onclick="display.value+='.'" />
+        <input type="button" name="equal" class="but" value="=" onclick="display.value=eval(display.value)"/>
+        <input type="button" name="div" class="but" value="/" onclick="display.value+='/'" />
+    </div>
+        </form>
+</center>
+</body>
+</html>
